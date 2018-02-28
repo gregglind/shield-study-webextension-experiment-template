@@ -1,0 +1,6 @@
+{
+  "name": "WebExtension-shield-study",
+  "id": "webextensionExperiment@shield.mozilla.org",
+  "version": "1.0.0",
+  "manifest_version": 2
+}
