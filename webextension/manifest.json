@@ -1,6 +1,23 @@
 {
   "name": "WebExtension-shield-study",
-  "id": "webextensionExperiment@shield.mozilla.org",
+  "applications": {
+    "gecko": { "id": "webextensionExperiment@shield.mozilla.org" }
+  },
   "version": "1.0.0",
-  "manifest_version": 2
+  "manifest_version": 2,
+  "sidebar_action": {
+    "default_title": "Demonstration Sidebar",
+    "default_panel": "sidebar.html"
+  },
+  "experiment_apis": {
+    "prefs": {
+      "schema": "./privileged/prefs/schema.json",
+      "parent": {
+        "scopes": ["addon_parent"],
+        "script": "./privileged/prefs/prefs.jsm",
+        "paths": [["hello"]]
+      }
+    }
+  },
+
 }

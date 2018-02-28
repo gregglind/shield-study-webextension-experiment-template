@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "namespace": "prefs",
+    "description": "Pref get, set, watch, unwatch(?)",
+    "functions": [
+      {
+        "name": "get",
+        "type": "function",
+        "description": "Returns the value of a pref",
+        "async": true,
+        "parameters": ["prefName"]
+      }
+      {
+        "name": "set",
+        "type": "function",
+        "description": "Sets the value of a pref",
+        "async": true,
+        "parameters": ["prefName", "value"]
+      }
+    ]
+  }
+]
