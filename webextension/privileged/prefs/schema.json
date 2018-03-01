@@ -8,14 +8,29 @@
         "type": "function",
         "description": "Returns the value of a pref",
         "async": true,
-        "parameters": ["prefName"]
-      }
+        "parameters": [
+          {
+            "name": "prefName",
+            "type": "string"
+          }
+        ]
+      },
       {
         "name": "set",
         "type": "function",
         "description": "Sets the value of a pref",
         "async": true,
-        "parameters": ["prefName", "value"]
+        "parameters": [
+          {
+            "name": "prefName",
+            "type": "string"
+          },
+          {
+            "name": "value",
+            "type": "any"
+          }
+
+        ]
       }
     ]
   }

@@ -1,0 +1,20 @@
+{
+  "name": "shield-study-webextension-experiment-template",
+  "version": "1.0.0",
+  "description": "A prototype for the new development of Shield studies as WebExtension Experiments",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biancadanforth/shield-study-webextension-experiment-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biancadanforth/shield-study-webextension-experiment-template/issues"
+  },
+  "homepage": "https://github.com/biancadanforth/shield-study-webextension-experiment-template#readme"
+}

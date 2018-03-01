@@ -1,13 +1,6 @@
 "use strict";
 
-/** An Example JSM, implementing "addon-specific prefs"
-  *
-  */
-
-/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "(EXPORTED_SYMBOLS|AddonPrefs)" }]*/
-var EXPORTED_SYMBOLS = ["AddonPrefs"];
-
-Components.utils.import("resource://gre/modules/Services.jsm");
+ChromeUtils.import("resource://gre/modules/Services.jsm");
 
 const BASE_PREF = "extensions.original-bootstrap-addon-id.";
 
@@ -37,15 +30,21 @@ function set(key, type, value) {
     case "int":
       return Services.prefs.setIntPref(key, value);
   }
-
   throw new Error(`Unknown type: ${type}`);
 }
 
-var AddonPrefs = {
-  get, set,
-};
-
-
-// webpack:`libraryTarget: 'this'`
-this.EXPORTED_SYMBOLS = EXPORTED_SYMBOLS;
-this.AddonPrefs = AddonPrefs;
+/* https://firefox-source-docs.mozilla.org/toolkit/components/extensions/webextensions/functions.html */
+this.prefs = class extends ExtensionAPI {
+  getAPI(context) {
+    return {
+      prefs: {
+        async get(prefName) {
+          return "getting";
+        },
+        async set(prefName, value) {
+          return "set";
+        }
+      }
+    };
+  }
+}

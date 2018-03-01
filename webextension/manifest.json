@@ -14,10 +14,9 @@
       "schema": "./privileged/prefs/schema.json",
       "parent": {
         "scopes": ["addon_parent"],
-        "script": "./privileged/prefs/prefs.jsm",
-        "paths": [["hello"]]
+        "script": "./privileged/prefs/prefs.js",
+        "paths": [["prefs"]]
       }
     }
-  },
-
+  }
 }
